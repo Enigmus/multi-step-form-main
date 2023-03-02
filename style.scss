@@ -148,7 +148,7 @@ body{
         font-size: 14px;
         font-weight: 700;
 
-        &_active{
+        &_active {
             background-color: $lightBlue;
             color: $marineBlue;            
         }
@@ -205,6 +205,10 @@ body{
 }
 .step2 {
     display: none;
+}
+
+.step3{
+    
 }
 
 .header-step {
@@ -267,8 +271,6 @@ body{
         }
     }    
 }
-
-
 
 .step {
     // .step__plans
@@ -409,6 +411,95 @@ body{
         }
     }
 }
+
+.add-on {
+    display: flex;
+    flex-direction: column;
+
+    // .add-on__checkbox
+    &__checkbox{
+        display: none;
+        &:checked + .add-on__label {
+            border-color: $purplishBlue;
+            background-color: $alabaster;
+        }
+        &:checked + .add-on__label > .add-on__checkbox-mod {
+            background-color: $purplishBlue;
+            border-color: transparent;
+        }
+        
+        /* &:checked + .add-on__label > .add-on__checkbox-mod::before {
+            background-color: $purplishBlue;
+            border-color: transparent;
+        } */
+    }
+
+    // .add-on__label
+    &__label {
+        cursor: pointer;
+        display: flex;        
+        flex-direction: row;
+        align-items: center;
+        column-gap: 24px;
+        padding: 20px 24px;
+        border: 1px solid $lightGray;
+        border-radius: 7px;
+        background-color: $white;
+        transition: all 0.3s ease-in-out;
+
+        &:not(:last-child) {
+            margin-bottom: 17px;
+        }
+
+        @media (any-hover: hover){
+            &:hover{
+                border-color: $purplishBlue; 
+                background-color: $alabaster;
+            }
+        }
+
+    }
+    // .add-on__checkbox-mod
+    &__checkbox-mod {
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        border: 1px solid $lightGray;        
+        background-color: transparent;
+        transition: all 0.3s ease-in-out;
+
+    }
+
+    // .add-on__text
+    &__text {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        row-gap: 6px;
+    }
+
+    // .add-on__title
+    &__title {
+        color: $marineBlue;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    // .add-on__subtitle
+    &__subtitle {
+        color: $coolGray;
+        letter-spacing: -1px;
+        font-size: 16px;
+    }
+
+    // .add-on__price
+    &__price {
+        color: $purplishBlue;
+        font-size: 14px;
+    }
+}
+
+
 .btn {
     border-radius: 10px;
     padding: 17px 27px;
