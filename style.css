@@ -98,7 +98,7 @@ body {
   box-shadow: 1px 4px 10px 0 rgba(66, 66, 66, 0.5);
 }
 .miltistep__sidebar {
-  flex: 0 1 275px;
+  flex: 0 0 275px;
 }
 .miltistep__main-block {
   flex: 1 1 auto;
@@ -113,6 +113,7 @@ body {
 .miltistep__buttons {
   display: flex;
   justify-content: space-between;
+  display: none;
 }
 
 .sidebar {
@@ -169,14 +170,6 @@ body {
 }
 .steps__body {
   margin-top: 42px;
-}
-
-.step1 {
-  display: none;
-}
-
-.step2 {
-  display: none;
 }
 
 .header-step {
@@ -361,6 +354,9 @@ body {
   }
 }
 .add-on__checkbox-mod {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 20px;
   height: 20px;
   border-radius: 4px;
@@ -389,6 +385,117 @@ body {
   font-size: 14px;
 }
 
+/******************Step 4 **************************/
+.finishing {
+  display: flex;
+  flex-direction: column;
+}
+.finishing__services {
+  background-color: hsl(231deg, 100%, 99%);
+  border-radius: 10px;
+  padding: 21px 26px 21px 23px;
+}
+.finishing__plan {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: hsl(213deg, 96%, 18%);
+  font-weight: 700;
+  padding-bottom: 25px;
+  border-bottom: 1px solid hsl(231deg, 11%, 63%);
+}
+.finishing__plan-title {
+  display: flex;
+  flex-direction: column;
+}
+.finishing__plan-link {
+  color: hsl(231deg, 11%, 63%);
+  margin-top: 7px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  text-decoration: underline;
+  transition: color 0.3s ease-in-out;
+}
+@media (any-hover: hover) {
+  .finishing__plan-link:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 10%;
+    color: hsl(243deg, 100%, 62%);
+  }
+}
+.finishing__addons {
+  padding-top: 20px;
+  font-size: 14px;
+}
+.finishing__addon {
+  display: flex;
+  justify-content: space-between;
+}
+.finishing__addon:not(:last-child) {
+  margin-bottom: 22px;
+}
+.finishing__addon-name {
+  color: hsl(231deg, 11%, 63%);
+}
+.finishing__addon-price {
+  color: hsl(213deg, 96%, 18%);
+}
+.finishing__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 25px;
+}
+.finishing__total-title {
+  color: hsl(231deg, 11%, 63%);
+  letter-spacing: -1px;
+}
+.finishing__total-price {
+  color: hsl(243deg, 100%, 62%);
+  font-size: 21px;
+  font-weight: 700;
+}
+
+/****************Step 5*************************************/
+.final {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.final__title {
+  color: hsl(213deg, 96%, 18%);
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 35px;
+}
+.final__subtitle {
+  color: hsl(231deg, 11%, 63%);
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 16px;
+}
+
+/***********************************************************/
+.step1 {
+  display: none;
+}
+
+.step2 {
+  display: none;
+}
+
+.step3 {
+  display: none;
+}
+
+.step4 {
+  display: none;
+}
+
 .btn {
   border-radius: 10px;
   padding: 17px 27px;
@@ -404,11 +511,21 @@ body {
   font-weight: 700;
 }
 .btn_next {
+  display: none;
   background-color: hsl(213deg, 96%, 18%);
   color: hsl(0deg, 0%, 100%);
 }
 .btn_confirm {
   display: none;
+  background-color: hsl(243deg, 100%, 62%);
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 50;
+  transition: all 0.3s ease-in-out;
+}
+@media (any-hover: hover) {
+  .btn_confirm:hover {
+    background-color: #938cfe;
+  }
 }
 .btn_show {
   display: block;

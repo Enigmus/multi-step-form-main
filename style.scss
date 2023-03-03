@@ -46,6 +46,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
 //VARS
 $marineBlue: hsl(213, 96%, 18%);
 $purplishBlue: hsl(243, 100%, 62%);
+$purplishBlueHover: #938cfe;
 $pastelBlue: hsl(228, 100%, 84%);
 $lightBlue: hsl(206, 94%, 87%);
 $strawberryRed: hsl(354, 84%, 57%);
@@ -90,7 +91,7 @@ body{
 
     // .milti-step__sidebar
     &__sidebar {
-        flex: 0 1 275px;
+        flex: 0 0 275px;
     }
          
     // .miltistep__main-block
@@ -111,6 +112,8 @@ body{
     &__buttons {
         display: flex;
         justify-content: space-between;
+
+        display: none;
     }
 }
 .sidebar {
@@ -199,16 +202,6 @@ body{
     &__body {
         margin-top: 42px;
     }
-}
-.step1{
-    display: none;
-}
-.step2 {
-    display: none;
-}
-
-.step3{
-    
 }
 
 .header-step {
@@ -461,6 +454,9 @@ body{
     }
     // .add-on__checkbox-mod
     &__checkbox-mod {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 20px;
         height: 20px;
         border-radius: 4px;
@@ -499,6 +495,168 @@ body{
     }
 }
 
+/******************Step 4 **************************/
+.finishing {
+    display: flex;
+    flex-direction: column;
+
+    // .finishing__services
+    &__services {
+        background-color: $alabaster;
+        border-radius: 10px;
+        padding: 21px 26px 21px 23px;
+    }
+
+    // .finishing__plan
+    &__plan {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;        
+        align-items: center;
+        color: $marineBlue;
+        font-weight: 700;
+        padding-bottom: 25px;
+        border-bottom: 1px solid $coolGray;
+    }
+
+    // .finishing__plan-title
+    &__plan-title {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .finishing__plan-contain
+    &__plan-contain {
+    }
+
+    // .finishing__plan-name
+    &__plan-name {
+    }
+
+    // .finishing__plan-period
+    &__plan-period {
+    }
+
+    // .finishing__plan-link
+    &__plan-link {
+        color: $coolGray;
+        margin-top: 7px;
+        font-weight: 400;
+        letter-spacing: -1px;
+        text-decoration: underline;
+        transition: color 0.3s ease-in-out;
+
+        @media (any-hover: hover){
+            &:hover{
+                text-decoration: underline;
+                text-decoration-thickness: 10%;
+                color: $purplishBlue;
+            }
+        }
+    }
+
+    // .finishing__plan-price
+    &__plan-price {
+    }
+
+    // .finishing__addons
+    &__addons {
+        padding-top: 20px;
+        font-size: 14px;        
+    }
+
+    // .finishing__addon
+    &__addon {
+        display: flex;
+        justify-content: space-between;
+        
+        &:not(:last-child){
+            margin-bottom: 22px;
+        }
+    }
+
+    // .finishing__addon-name
+    &__addon-name {
+        color: $coolGray;
+    }
+
+    // .finishing__addon-price
+    &__addon-price {
+        color: $marineBlue;
+    }
+
+    // .finishing__total
+    &__total {
+        display: flex;
+        justify-content: space-between;        
+        align-items: center;
+        padding: 30px 25px;
+    }
+
+    // .finishing__total-title
+    &__total-title {
+        color: $coolGray;
+        letter-spacing: -1px;
+    }
+
+    // .finishing__total-name
+    &__total-name {        
+    }
+
+    // .finishing__total-price
+    &__total-price {
+        color: $purplishBlue;
+        font-size: 21px;
+        font-weight: 700;
+    }
+}
+
+/****************Step 5*************************************/
+.final {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    
+    // .final__ico
+    &__ico {
+    }
+
+    // .final__title
+    &__title {
+        color: $marineBlue;
+        font-size: 32px;
+        font-weight: 700;
+        margin-top: 35px;
+    }
+
+    // .final__subtitle
+    &__subtitle {
+        color: $coolGray;
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: center;
+        margin-top: 16px;
+    }
+}
+/***********************************************************/
+.step1{
+    display: none;
+}
+.step2 {
+    display: none;
+}
+
+.step3{
+    display: none;
+}
+.step4{
+    display: none;
+}
+.step5{
+    
+}
 
 .btn {
     border-radius: 10px;
@@ -518,13 +676,24 @@ body{
 
     // .btn__next
     &_next {
+        display: none;
         background-color: $marineBlue;        
         color: $white;        
     }
 
     // .btn__confirm
     &_confirm {
-        display: none;        
+        display: none;   
+        background-color: $purplishBlue;        
+        color: $white; 
+        font-weight: 50;
+        transition: all 0.3s ease-in-out;
+
+        @media (any-hover: hover){
+            &:hover{
+                background-color: $purplishBlueHover;
+            }
+        }
     }
 
     //.btn_show
