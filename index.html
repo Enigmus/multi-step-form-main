@@ -11,7 +11,7 @@
 </head>
 <body>
         
-<div class="miltistep">
+<form class="miltistep" action="#" method="post">
   <div class="miltistep__container">
     <div class="miltistep__content">
 
@@ -54,24 +54,33 @@
         <div class="miltistep__main-steps steps">
 
           <!-- Step 1 start -->
-          <div class="steps__step step1">
+          <div class="steps__step">
             <div class="steps__head">
               <h2 class="steps__header header-step">Personal info</h2>
               <h3 class="steps__subheader subheader-step">Please provide your name, email address, and phone number.</h3>                      
             </div>
             <div class="steps__body personal-info">
-              <label for="name" class="personal-info__label personal-info__label_name">Name</label>
-              <input type="text" name="name" id="name" placeholder="e.g. Stephen King" class="personal-info__input personal-info__input_name">
-              <label for="email" class="personal-info__label personal-info__labal_email">Email Address</label>
-              <input type="email" name="email" id="email" placeholder="e.g. stephenking@lorem.com" class="personal-info__input personal-info__input_email">
-              <label for="phone" class="personal-info__label personal-info__label_phone">Phone Number</label>
-              <input type="tel" name="phone" id="phone" placeholder="e.g. +1 234 567 890" class="personal-info__input personal-info__input_phone">              
+              <div class="personal-info__head">
+                <label for="name"  class="personal-info__label">Name</label>
+                <span class="personal-info__error" id="nameError">This field is required</span> 
+              </div>
+              <input value="Vanessa Mint" type="text" name="name" id="name" placeholder="e.g. Stephen King" class="personal-info__input">
+              <div class="personal-info__head">
+                <label for="email" class="personal-info__label">Email Address</label>
+                <span class="personal-info__error" id="emailError">This field is required</span>
+              </div>              
+              <input value="vanessamint@" type="text" name="email" id="email" placeholder="e.g. stephenking@lorem.com" class="personal-info__input">
+              <div class="personal-info__head">
+                <label for="phone" class="personal-info__label">Phone Number</label>
+                <span class="personal-info__error" id="phoneError">This field is required</span>
+              </div>              
+              <input type="text" name="phone" id="phone" placeholder="e.g. +1 234 567 89" class="personal-info__input">              
             </div>
           </div>
           <!-- Step 1 end --> 
 
           <!-- Step 2 start -->
-          <div class="steps__step step2">
+          <div class="steps__step">
             <div class="steps__head">
               <h2 class="steps__header header-step">Select your plan</h2>
               <h3 class="steps__subheader subheader-step">You have the option of monthly or yearly billing.</h3>                      
@@ -134,7 +143,7 @@
           <!-- Step 2 end -->  
           
           <!-- Step 3 start -->
-          <div class="steps__step step3">
+          <div class="steps__step">
             <div class="steps__head">
               <h2 class="steps__header header-step">Pick add-ons</h2>
               <h3 class="steps__subheader subheader-step">Add-ons help enhance your gaming experience.</h3>                      
@@ -181,7 +190,7 @@
           <!-- Step 3 end -->
 
           <!-- Step 4 start -->
-          <div class="steps__step step4">
+          <div class="steps__step">
             <div class="steps__head">
               <h2 class="steps__header header-step">Finishing up</h2>
               <h3 class="steps__subheader subheader-step">Double-check everything looks OK before confirming.</h3>                      
@@ -221,7 +230,7 @@
           <!-- Step 4 end -->
 
           <!-- Step 5 start -->
-          <div class="steps__step step5 final">
+          <div class="steps__step final">
             <div class="final__ico">
               <img src="./images/icon-thank-you.svg" alt="ThankYou">
             </div>
@@ -235,19 +244,21 @@
         </div>
 
         <div class="miltistep__buttons">
-          <button class="btn btn_back btn_invisibl e">Go Back</button>
-          <button class="btn btn_next">Next Step</button>
-          <button class="btn btn_confirm btn_show">Confirm</button>
+          <button type="button" class="btn btn_back btn_invisible" id="btnBack">Go Back</button>
+          <button type="button" class="btn btn_next btn_show" id="btnNext">Next Step</button>
+          <button type="button" class="btn btn_confirm" id="btnConfirm">Confirm</button>
         </div>
       </div>    
     </div>
   </div>
-</div>
+</form>
 
   
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>. -->
-  </div>
+    Coded by <a href="#">Your Name Here</a>.     
+  </div>-->
+  <script src="https://unpkg.com/imask"></script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -113,7 +113,6 @@ body {
 .miltistep__buttons {
   display: flex;
   justify-content: space-between;
-  display: none;
 }
 
 .sidebar {
@@ -143,6 +142,7 @@ body {
   color: hsl(229deg, 24%, 87%);
   font-size: 14px;
   font-weight: 700;
+  transition: all 0.3s ease-in-out;
 }
 .sidebar__step-circle_active {
   background-color: hsl(206deg, 94%, 87%);
@@ -188,11 +188,25 @@ body {
   display: flex;
   flex-direction: column;
 }
+.personal-info__head {
+  display: flex;
+  justify-content: space-between;
+}
 .personal-info__label {
   color: hsl(213deg, 96%, 18%);
   font-size: 14px;
 }
+.personal-info__error {
+  display: none;
+  color: hsl(354deg, 84%, 57%);
+  font-size: 14px;
+  font-weight: 700;
+}
+.personal-info__error_show {
+  display: block;
+}
 .personal-info__input {
+  cursor: pointer;
   margin-top: 10px;
   margin-bottom: 23px;
   padding: 13px 20px 16px 16px;
@@ -200,10 +214,29 @@ body {
   border: 1px solid hsl(229deg, 24%, 87%);
   color: hsl(231deg, 11%, 63%);
   font-size: 16px;
+  color: hsl(213deg, 96%, 18%);
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
 }
 .personal-info__input:last-child {
   margin-bottom: 0;
 }
+.personal-info__input::placeholder {
+  color: hsl(231deg, 11%, 63%);
+  font-weight: 400;
+}
+.personal-info__input:focus {
+  border-color: hsl(213deg, 96%, 18%);
+}
+@media (any-hover: hover) {
+  .personal-info__input:hover {
+    border-color: hsl(243deg, 100%, 62%);
+  }
+}
+.personal-info__input_error {
+  border-color: hsl(354deg, 84%, 57%);
+}
+
 .step__plans {
   display: flex;
   flex-direction: row;
@@ -480,22 +513,6 @@ body {
 }
 
 /***********************************************************/
-.step1 {
-  display: none;
-}
-
-.step2 {
-  display: none;
-}
-
-.step3 {
-  display: none;
-}
-
-.step4 {
-  display: none;
-}
-
 .btn {
   border-radius: 10px;
   padding: 17px 27px;
@@ -514,6 +531,12 @@ body {
   display: none;
   background-color: hsl(213deg, 96%, 18%);
   color: hsl(0deg, 0%, 100%);
+  transition: background-color 0.3s ease-in-out;
+}
+@media (any-hover: hover) {
+  .btn_next:hover {
+    background-color: #174a8b;
+  }
 }
 .btn_confirm {
   display: none;
@@ -532,6 +555,10 @@ body {
 }
 .btn_invisible {
   visibility: hidden;
+}
+
+.step_hide {
+  display: none;
 }
 
 .attribution {

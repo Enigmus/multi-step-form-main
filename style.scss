@@ -45,6 +45,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
 
 //VARS
 $marineBlue: hsl(213, 96%, 18%);
+$marineBlueHove: #174a8b;
 $purplishBlue: hsl(243, 100%, 62%);
 $purplishBlueHover: #938cfe;
 $pastelBlue: hsl(228, 100%, 84%);
@@ -112,8 +113,6 @@ body{
     &__buttons {
         display: flex;
         justify-content: space-between;
-
-        display: none;
     }
 }
 .sidebar {
@@ -121,7 +120,6 @@ body{
     padding: 40px 30px;
     background-image: url('./images/bg-sidebar-desktop.svg');
     background-repeat: no-repeat;
-
 
     // .sidebar__steps
     &__steps {
@@ -132,7 +130,6 @@ body{
     }
 
     // .sidebar__step
-
     &__step {
         display: flex;
         column-gap: 15px;
@@ -150,6 +147,7 @@ body{
         color: $lightGray;
         font-size: 14px;
         font-weight: 700;
+        transition: all 0.3s ease-in-out;
 
         &_active {
             background-color: $lightBlue;
@@ -215,31 +213,37 @@ body{
     font-size: 16px;
 }
 
-
 .personal-info {
     display: flex;
     flex-direction: column;
+
+    // .personal-info__head
+    &__head {
+        display: flex;
+        justify-content: space-between;
+    }
 
     // .personal-info__label
     &__label {
         color: $marineBlue;
         font-size: 14px;
-        
-        // .personal-info__label_name
-        &_name {
-        }
+    }
 
-        // .personal-info__label_email
-        &_email {
-        }  
+    // .personal-info__error
+    &__error {
+        display: none;
+        color: $strawberryRed;
+        font-size: 14px;
+        font-weight: 700;
 
-        // .personal-info__label_phone
-        &_phone {
+        &_show{
+            display: block;
         }
     }
 
     // .personal-info__input
     &__input {
+        cursor: pointer;
         margin-top: 10px;
         margin-bottom: 23px;
         padding: 13px 20px 16px 16px;
@@ -247,23 +251,33 @@ body{
         border: 1px solid $lightGray;
         color: $coolGray;
         font-size: 16px;
+        color: $marineBlue;
+        font-weight: 500;
+        transition: all 0.3s ease-in-out;
 
         &:last-child{
             margin-bottom: 0;
         }
-        // .personal-info__input_name
-        &_name {
+        &::placeholder{
+            color: $coolGray;
+            font-weight: 400;     
+        }
+        &:focus{
+            border-color: $marineBlue;
         }
 
-        // .personal-info__input_email
-        &_email {
+        @media (any-hover: hover){
+            &:hover{
+                border-color: $purplishBlue;
+            }
         }
 
-        // .personal-info__input_phone
-        &_phone {
+        &_error{
+            border-color: $strawberryRed;
         }
-    }    
+    }
 }
+
 
 .step {
     // .step__plans
@@ -618,7 +632,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100px;
-    
+
     // .final__ico
     &__ico {
     }
@@ -641,22 +655,6 @@ body{
     }
 }
 /***********************************************************/
-.step1{
-    display: none;
-}
-.step2 {
-    display: none;
-}
-
-.step3{
-    display: none;
-}
-.step4{
-    display: none;
-}
-.step5{
-    
-}
 
 .btn {
     border-radius: 10px;
@@ -678,7 +676,14 @@ body{
     &_next {
         display: none;
         background-color: $marineBlue;        
-        color: $white;        
+        color: $white;  
+        transition: background-color 0.3s ease-in-out;
+
+        @media (any-hover: hover){
+            &:hover{
+                background-color: $marineBlueHove;
+            }
+        }      
     }
 
     // .btn__confirm
@@ -707,6 +712,10 @@ body{
     }
 }
 
+
+.step_hide{
+    display: none;
+}
 
 
 .attribution {
