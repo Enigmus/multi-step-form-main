@@ -11,12 +11,12 @@
 </head>
 <body>
         
-<form class="miltistep" action="#" method="post">
-  <div class="miltistep__container">
-    <div class="miltistep__content">
+<form class="multistep" action="#" method="get" id="multistep">
+  <div class="multistep__container">
+    <div class="multistep__content">
 
       <!-- Sidebar start -->
-      <div class="miltistep__sidebar sidebar">
+      <div class="multistep__sidebar sidebar">
         <ul class="sidebar__steps">
           <li class="sidebar__step">
               <div class="sidebar__step-circle sidebar__step-circle_active">1</div>
@@ -50,8 +50,8 @@
       </div>
       <!-- Sidebar end -->
 
-      <div class="miltistep__main-block">
-        <div class="miltistep__main-steps steps">
+      <div class="multistep__main-block">
+        <div class="multistep__main-steps steps">
 
           <!-- Step 1 start -->
           <div class="steps__step">
@@ -69,12 +69,12 @@
                 <label for="email" class="personal-info__label">Email Address</label>
                 <span class="personal-info__error" id="emailError">This field is required</span>
               </div>              
-              <input value="vanessamint@" type="text" name="email" id="email" placeholder="e.g. stephenking@lorem.com" class="personal-info__input">
+              <input value="vanessamint@mail.ru" type="email" name="email" id="email" placeholder="e.g. stephenking@lorem.com" class="personal-info__input">
               <div class="personal-info__head">
                 <label for="phone" class="personal-info__label">Phone Number</label>
                 <span class="personal-info__error" id="phoneError">This field is required</span>
               </div>              
-              <input type="text" name="phone" id="phone" placeholder="e.g. +1 234 567 89" class="personal-info__input">              
+              <input value="79205006421" type="tel" name="phone" id="phone" placeholder="e.g. +1 234 567 89" class="personal-info__input">              
             </div>
           </div>
           <!-- Step 1 end --> 
@@ -89,43 +89,43 @@
               <div class="step__plans">
 
                 <div class="plan">
-                  <input type="radio" name="plan" id="plan1" class="plan__radio" checked>
+                  <input type="radio" name="plan" value="Arcade" id="plan1" class="plan__radio" checked>
                   <label class="plan__label" for="plan1">
                     <div class="plan__ico">
                       <img src="./images/icon-arcade.svg" alt="arcade">
                     </div>
                     <div class="plan__body">
                       <div class="plan__title">Arcade</div>
-                      <div class="plan__price">$9/mo</div>
-                      <div class="plan__gift">2 months free</div> 
+                      <div class="plan__price" data-month="9" data-year="90">$9/mo</div>
+                      <div class="plan__gift plan__gift_hide">2 months free</div> 
                     </div>                  
                   </label>
                 </div>
 
                 <div class="plan">
-                  <input type="radio" name="plan" id="plan2" class="plan__radio">
+                  <input type="radio" name="plan" value="Advanced" id="plan2" class="plan__radio">
                   <label class="plan__label" for="plan2">
                     <div class="plan__ico">
                       <img src="./images/icon-advanced.svg" alt="arcade">
                     </div>
                     <div class="plan__body">
                       <div class="plan__title">Advanced</div>
-                      <div class="plan__price">$12/mo</div>
-                      <div class="plan__gift">2 months free</div> 
+                      <div class="plan__price" data-month="12" data-year="120">$12/mo</div>
+                      <div class="plan__gift plan__gift_hide">2 months free</div> 
                     </div>                  
                   </label>
                 </div>
 
                 <div class="plan">
-                  <input type="radio" name="plan" id="plan3" class="plan__radio">
+                  <input type="radio" name="plan" value="Pro" id="plan3" class="plan__radio">
                   <label class="plan__label" for="plan3">
                     <div class="plan__ico">
                       <img src="./images/icon-pro.svg" alt="arcade">
                     </div>
                     <div class="plan__body">
                       <div class="plan__title">Pro</div>
-                      <div class="plan__price">$15/mo</div>
-                      <div class="plan__gift">2 months free</div> 
+                      <div class="plan__price" data-month="15" data-year="150">$15/mo</div>
+                      <div class="plan__gift plan__gift_hide">2 months free</div> 
                     </div>                  
                   </label>
                 </div> 
@@ -159,10 +159,10 @@
                   <div class="add-on__title">Online service</div>
                   <div class="add-on__subtitle">Access to multiplayer games</div>
                 </div>
-                <div class="add-on__price">+$1/mo</div>
+                <div class="add-on__price" data-month="1" data-year="10">+$1/mo</div>
               </label> 
 
-              <input type="checkbox" name="addOn-online" id="addOn-large" class="add-on__checkbox" checked>
+              <input type="checkbox" name="addOn-large" id="addOn-large" class="add-on__checkbox" checked>
               <label class="add-on__label" for="addOn-large">                
                 <div class="add-on__checkbox-mod">
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9"><path fill="none" stroke="#FFF" stroke-width="2" d="m1 4 3.433 3.433L10.866 1"/></svg>
@@ -171,10 +171,10 @@
                   <div class="add-on__title">Larger storage</div>
                   <div class="add-on__subtitle">Extra 1TB of cloud save</div>
                 </div>
-                <div class="add-on__price">+$2/mo</div>
+                <div class="add-on__price" data-month="2" data-year="20">+$2/mo</div>
               </label>
 
-              <input type="checkbox" name="addOn-online" id="addOn-custom" class="add-on__checkbox">
+              <input type="checkbox" name="addOn-custom" id="addOn-custom" class="add-on__checkbox">
               <label class="add-on__label" for="addOn-custom">                
                 <div class="add-on__checkbox-mod">
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9"><path fill="none" stroke="#FFF" stroke-width="2" d="m1 4 3.433 3.433L10.866 1"/></svg>
@@ -183,7 +183,7 @@
                   <div class="add-on__title">Customizable Profile</div>
                   <div class="add-on__subtitle">Custom theme on your profile</div>
                 </div>
-                <div class="add-on__price">+$2/mo</div>
+                <div class="add-on__price" data-month="2" data-year="20">+$2/mo</div>
               </label>             
             </div>
           </div>
@@ -195,13 +195,13 @@
               <h2 class="steps__header header-step">Finishing up</h2>
               <h3 class="steps__subheader subheader-step">Double-check everything looks OK before confirming.</h3>                      
             </div>
-            <div class="steps__body finishing">
+            <div class="steps__body finishing" id="total">
               <div class="finishing__services">
                 <div class="finishing__plan">
                   <div class="finishing__plan-title">
                     <div class="finishing__plan-contain">
-                      <span class="finishing__plan-name">Arcade </span>
-                      <span class="finishing__plan-period">(Monthly)</span>
+                      <span class="finishing__plan-name">Arcade</span>
+                      <span class="finishing__plan-period"> (Monthly)</span>
                     </div>
                     <a href="#" class="finishing__plan-link">Change</a>
                   </div>
@@ -243,7 +243,7 @@
 
         </div>
 
-        <div class="miltistep__buttons">
+        <div class="multistep__buttons">
           <button type="button" class="btn btn_back btn_invisible" id="btnBack">Go Back</button>
           <button type="button" class="btn btn_next btn_show" id="btnNext">Next Step</button>
           <button type="button" class="btn btn_confirm" id="btnConfirm">Confirm</button>

@@ -78,17 +78,17 @@ body {
   background-color: hsl(217deg, 100%, 97%);
 }
 
-.miltistep {
+.multistep {
   display: flex;
   align-items: center;
   height: 100vh;
 }
-.miltistep__container {
+.multistep__container {
   margin: 0 auto;
   width: 940px;
   height: 600px;
 }
-.miltistep__content {
+.multistep__content {
   display: flex;
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 10px;
@@ -97,20 +97,20 @@ body {
   height: 100%;
   box-shadow: 1px 4px 10px 0 rgba(66, 66, 66, 0.5);
 }
-.miltistep__sidebar {
+.multistep__sidebar {
   flex: 0 0 275px;
 }
-.miltistep__main-block {
+.multistep__main-block {
   flex: 1 1 auto;
   height: 100%;
   padding: 42px 100px 17px 98px;
   display: flex;
   flex-direction: column;
 }
-.miltistep__main-steps {
+.multistep__main-steps {
   flex-grow: 1;
 }
-.miltistep__buttons {
+.multistep__buttons {
   display: flex;
   justify-content: space-between;
 }
@@ -258,6 +258,7 @@ body {
   background-color: hsl(231deg, 100%, 99%);
 }
 .plan__label {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   border: 1px solid hsl(231deg, 11%, 63%);
@@ -294,6 +295,9 @@ body {
   color: hsl(213deg, 96%, 18%);
   font-size: 14px;
   font-weight: 500;
+}
+.plan__gift_hide {
+  display: none;
 }
 
 .plan-toggle {
@@ -496,7 +500,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: 100%;
 }
 .final__title {
   color: hsl(213deg, 96%, 18%);

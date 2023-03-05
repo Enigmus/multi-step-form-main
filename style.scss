@@ -67,7 +67,7 @@ body{
 }
 
 
-.miltistep {
+.multistep {
     display: flex;
     align-items: center;
     height: 100vh;
@@ -95,7 +95,7 @@ body{
         flex: 0 0 275px;
     }
          
-    // .miltistep__main-block
+    // .multistep__main-block
     &__main-block {
         flex: 1 1 auto;
         height: 100%;
@@ -104,12 +104,12 @@ body{
         flex-direction: column;
     }
 
-    // .miltistep__main-steps
+    // .multistep__main-steps
     &__main-steps {
         flex-grow: 1;
     }
 
-    // .miltistep__buttons
+    // .multistep__buttons
     &__buttons {
         display: flex;
         justify-content: space-between;
@@ -208,6 +208,7 @@ body{
     line-height: 1;
     font-weight: 700;
 }
+
 .subheader-step {
     color: $coolGray;
     font-size: 16px;
@@ -293,7 +294,7 @@ body{
     }
 }
 .plan {
-    flex: 0 1 33.333%;
+    flex: 0 1 33.333%;   
 
     // .plan_radio
     &__radio{
@@ -308,6 +309,7 @@ body{
 
     // .plan__label
     &__label{
+        cursor: pointer;
         display: flex;
         flex-direction: column;        
         border: 1px solid $coolGray;    
@@ -355,6 +357,9 @@ body{
         color: $marineBlue;
         font-size: 14px;
         font-weight: 500;
+        &_hide{
+            display: none;
+        }
     }
 }
 .plan-toggle {
@@ -631,7 +636,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 100%;
 
     // .final__ico
     &__ico {
