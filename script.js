@@ -8,7 +8,7 @@ const addOns = document.querySelectorAll('.add-on__label');
 
 let dataPricePlan;                      //Массив тарифов
 let dataAddOns;                         //Масиив дополнений
-let activeStep = 2;                     //стартовый шаг
+let activeStep = 1;                     //стартовый шаг
 let totalSteps = steps.length;          //всего шагов
 const lengthTel = 11;                   //количество символов в номере телефона
 let durationCheck = false;              //начальное положение переключателя месяц/год    
