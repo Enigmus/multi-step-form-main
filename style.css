@@ -169,6 +169,7 @@ body {
 @media (max-width: 768px) {
   .multistep__buttons {
     width: 100%;
+    margin-top: 18px;
     padding: 0 0 18px 0;
   }
 }
