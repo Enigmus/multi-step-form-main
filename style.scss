@@ -74,7 +74,6 @@ body{
     @media (max-width: 768px){
         flex-direction: column;
         height: 100vh;
-        position: relative;
     }
     // .milti-step__container
     &__container {
@@ -87,7 +86,11 @@ body{
             margin: -74px 0 0 0;
             padding: 0 15px 0 15px;
             width: 100%;
-            height: auto;
+            height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         } 
     }
 
@@ -157,11 +160,8 @@ body{
         justify-content: space-between;
 
         @media (max-width: 768px){
-            position: absolute;
             width: 100%;
-            left: 0;
-            bottom: 0;
-            padding: 18px 16px;
+            padding: 0 0 18px 0;
         }
     }
 }
